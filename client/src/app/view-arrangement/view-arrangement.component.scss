@@ -1,0 +1,78 @@
+
+.login-block {
+  background: whitesmoke;
+  float: left;
+  width: 100vw;
+  height: 100vh;
+  padding: 50px 0;
+}
+
+.banner-sec {
+  background-size: cover;
+  border-radius: 0 10px 10px 0;
+  padding: 0;
+  margin: auto;
+}
+
+.container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 15px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner {
+  border-radius: 0 10px 10px 0;
+}
+
+.login-sec {
+  padding: 50px 30px;
+  position: relative;
+}
+
+.login-sec h2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  color: black;
+}
+
+.login-sec h2:after {
+  content: " ";
+  width: 100px;
+  height: 5px;
+  background: blue;
+  display: block;
+  margin-top: 20px;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+
+
+.logo-design {
+  width: 200px;
+  margin-left: 5%;
+}
+
+.img-login:hover {
+  transition-property: transform;
+  position: relative;
+  transition-delay: 1s;
+  transition-duration: 3s;
+  transform: scaleX(1.09);
+  transform: scaleY(1.09);
+}
+
+@media only screen and (max-width: 600px) {
+  .login-block {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .login-sec {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

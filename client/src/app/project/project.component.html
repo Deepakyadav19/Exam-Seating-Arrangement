@@ -1,0 +1,93 @@
+<div>
+  <app-navbar></app-navbar>
+  <div class="row">
+    <div class="col-2 d-none d-lg-block">
+    <app-sidebar></app-sidebar>
+    </div>
+    
+    <div class="col-10">
+      <div class="custom-card">
+      <div class="input-group">
+        <span class="input-group-addon">
+          <i class="fa fa-search"></i>
+      </span>
+
+        <input type="search" class="form-control"  id="myInput" (keyup)="handleSearch($event.target.value)" placeholder= 'Search By project name'/>        
+    </div>
+      <table class="table table-striped" id="myTable">
+        <thead>
+          <tr>
+            <th scope="col">Project Name<i class="fas fa-sort clickable" (click)="sortList('projectName')"></i>
+
+            </th>
+            <th scope="col">Project Manager
+
+            </th>
+            <th scope="col">Project Members
+
+            </th>
+            <th scope="col">Start Date<i class="fas fa-sort clickable" (click)="sortList('startDate')" ></i>
+
+            </th>
+            <th scope="col">End Date
+
+            </th>
+            <th scope="col">Status
+
+            </th>
+            <th scope="col" style="width: 4rem;">View
+            </th>
+            <th scope="col" style="width: 4.8rem;">Update
+            </th>
+            <th scope="col" style="width: 4.5rem;">Delete
+            </th>
+          </tr>
+
+        </thead>
+        <div class="no-data" *ngIf="usersArray?.length === 0">No Data Available</div>
+        <tbody *ngFor="let project of projectsArray">
+          <tr>
+            <td>
+             {{project.projectName}}
+            </td>
+            <td>
+              {{project.managerName}}
+            </td>
+            <td>
+              <span *ngFor="let member of project.memberNames">
+               <span class="member">{{member}}</span><br/>
+              </span>
+            </td>
+            <td>
+              {{project.startDate}}
+            </td>
+            <td>
+              {{project.endDate}}
+            </td>
+            <td>
+              {{project.status}}
+            </td>
+            <td style="width: 4rem;">
+              <a [routerLink]="['/project/details', project.projectId]">
+                <i class="fas fa-eye"></i>
+              </a>
+            </td>
+            <td style="width: 4.8rem;">
+              <a class="edit" [routerLink]="['/project','update',project.projectId]">
+                <i class="fas fa-pencil-alt"></i>
+              </a>
+            </td>
+            <td style="width: 4.5rem;">
+              <a class="delete" (click)="deleteProject(project.projectId)"><i class="fas fa-trash"></i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="pagination-div">
+        <a class="move-left" [ngClass]="{'disabled': page === 1}" (click)="handlePaginationResult('prev')">{{page-1 !== 0 ? page-1 : ''}}<i class="fas fa-arrow-circle-left"></i></a>
+        <a class="move-right" [ngClass]="{'disabled': page * limit >= dataSize}" (click)="handlePaginationResult('next')"><i class="fas fa-arrow-circle-right"></i>{{page+1}}</a>
+        </div>   
+    </div>
+  </div>
+  </div>
+</div> 

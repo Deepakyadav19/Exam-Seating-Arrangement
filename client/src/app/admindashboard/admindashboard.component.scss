@@ -1,0 +1,207 @@
+.pagination-div {
+  display: flex !important;
+  justify-content: flex-end;
+
+  & > *{
+    font-size: 1.4rem;
+    padding-right: 1px;
+  }
+}
+
+.pagination {
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+    align-items: center;
+
+  }
+  .pagination:active{
+    background-color: #0183FF;
+  }
+ 
+  input {
+    width: 100%;
+    max-width: 240px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-color: black;
+    border-radius: 10px;
+    background: white;
+    font-size: medium;
+  }
+
+  input:focus {
+    background-color: whitesmoke;
+  }
+
+  input::placeholder {
+    color: black;
+    font-weight: 300;
+    font-size: 15px;
+  }
+
+.main {
+  display: flex;
+}
+.show i {
+  color: pink;
+}
+.edit i {
+  color: grey;
+  cursor: pointer;
+}
+.delete i {
+  color: red;
+}
+
+tbody:nth-child(even) {
+  background: whitesmoke;
+}
+tbody:nth-child(odd) {
+  background: white;
+}
+td {
+  font-size: 14px;
+  color: black;
+  line-height: 1.4;
+  text-align: center;
+  font-weight: 400;
+}
+
+th {
+  font-size: 16px;
+  line-height: 1.4;
+  background-color: #0183ff;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 8rem !important;
+  position: sticky;
+  color: white;
+ }
+
+.table{
+  margin-top: 2%;
+  table-layout: fixed;
+  overflow: visible;
+  word-wrap: break-word;
+
+}
+
+.table tr:hover {
+  background-color: #ddd;
+  cursor: default;
+}
+
+.input-group{
+  float:right !important;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.input-group > .form-control
+{ border-style: none;
+  border-radius: 2rem;
+  border-color: #868e9c;
+  margin-bottom: 0.5rem;
+  border-width: thin;
+  margin-left: 0.5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  font-size: medium;
+}
+.custom-card{
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  background-color: whitesmoke;
+  display: inline-block;
+  position: relative;
+}
+
+#myInput:active {
+  background-color: white;
+}
+.input-group-addon
+{
+  color:rgb(24, 161, 216);
+}
+.fa-sort:before
+{
+  margin-left:0.5rem;
+}
+#myInput:active
+{
+background-color: white;
+}
+.page-link:hover {
+  z-index: 2;
+  color: #0056b3;
+  text-decoration: none;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+
+.page-item.active .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  cursor: auto;
+  background-color: #fff;
+  border-color: #dee2e6;
+}
+
+.disabled{
+  cursor: none;
+  opacity: 0.4;
+   & > span{
+     display: none;
+   }
+}
+
+.clickable{
+  cursor: pointer;
+  
+  &:hover{
+      opacity: 0.4;
+  }
+}
+
+.no-data{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    font-size: 1rem;
+    margin-top: 2rem;
+    color: grey;
+}
